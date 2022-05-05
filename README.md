@@ -10,6 +10,12 @@
 
 - Prettier
 
+## ENV
+
+It is important to add the enviroment variable
+
+`VITE_APP_CUSTOM_API_GHIBLI="you custom api"`
+
 ## How To Use
 
 To clone and run this application, you'll need Git and Node.js (which comes with yarn) installed on your computer. From your command line:
