@@ -9,6 +9,7 @@ function useForm(formData: FormState): useFormCustomHook {
 
   function handleInputChange({ target }: ChangeEvent<HTMLInputElement>): void {
     setFormValues((prev) => ({ ...prev, [target.name]: target.value }));
+    console.log(formValues);
   }
 
   function handleTextAreaChange({ target }: ChangeEvent<HTMLTextAreaElement>): void {
@@ -29,11 +30,10 @@ function useForm(formData: FormState): useFormCustomHook {
       if (data) {
         toast.success("successfully created", { autoClose: 2000 });
       }
-
       // reset toast
       reset();
     } catch (err: any) {
-      (err.response.data.errors as any[]).forEach((el) => {
+      (err.response.data.errors as any[])?.forEach((el) => {
         toast.error(el.msg, { autoClose: 3000 });
       });
     }

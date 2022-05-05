@@ -12,9 +12,23 @@
 
 ## ENV
 
-It is important to add the enviroment variable
+It is important to add the enviroment variable.
 
-`VITE_APP_CUSTOM_API_GHIBLI="you custom api"`
+**Production (default mode)**
+
+```
+# .env.development
+
+VITE_APP_CUSTOM_API_GHIBLI=http://localhost:8080/api
+```
+
+**Production**
+
+```
+# .env.production
+
+VITE_APP_CUSTOM_API_GHIBLI="You API"
+```
 
 ## How To Use
 
